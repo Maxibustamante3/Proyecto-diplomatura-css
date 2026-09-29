@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imperial Motors</title>
+    <link rel="stylesheet" href="../style/styles.css">
 </head>
 <body>
     <header>
@@ -18,38 +19,39 @@
             </ul>
         </nav>
     </header>
-    
-<h1>Nuestra Galería</h1>
-<img src="../assets/galeria/vendedor2.jpg" alt="vendedor2">
-<img src="../assets/galeria/vendedor.avif" alt="vendedor">
-<img src="../assets/galeria/vendedor3.avif" alt="vendedor3">
-<img src="../assets/galeria/gente-en-consesionaria.jpg" alt="Gente en la concesionaria">
-
-
+    <main class="galeria">
+    <h1>Nuestra Galería</h1>
+    <div class="galeria-imagenes">
+        <img src="../assets/galeria/vendedor2.jpg" alt="Vendedor">
+        <img src="../assets/galeria/vendedor.avif" alt="Vendedor">
+        <img src="../assets/galeria/vendedor3.avif" alt="Vendedor">
+        <img src="../assets/galeria/gente-en-consesionaria.jpg" alt="Gente en la concesionaria">
+    </div>
+    </main>
 
     <footer>
         <p>&copy;<span id="year"></span> Todos los Derechos Reservados</p>
         <ul>
             <li>
-                <a href="https://www.facebook.com" target="_blank">Facebook
-                <img src="./assets/logos/logofacebook.png" alt="Logo de Facebook" >
-            </a>
-        </li>
-
+                <a href="https://www.facebook.com" target="_blank"> Facebook
+                    <img src="../assets/logos/logofacebook.png" alt="Logo de Facebook">
+                </a>
+            </li>
             <li>
-                <a href="https://www.instagram.com" target="_blank">Instagram
-                <img src="./assets/logos/logoinstagram.png" alt="Logo de Instagram" >
-            </a>
-        </li>
+                <a href="https://www.instagram.com" target="_blank"> Instagram
+                    <img src="../assets/logos/logoinstagram.png" alt="Logo de Instagram">
+                </a>
+            </li>
             <li>
-                <a href="https://wa.me/1234567890" target="_blank">Whatsapp
-                <img src="./assets/logos/logowhatsapp.png" alt="Logo de Whatsapp" >
-            </a>
-            </li>     
+                <a href="https://wa.me/1234567890" target="_blank"> WhatsApp
+                    <img src="../assets/logos/logowhatsapp.png" alt="Logo de WhatsApp">
+                </a>
+            </li>
         </ul>
     </footer>
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
+
 </html>
