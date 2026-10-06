@@ -1,12 +1,14 @@
 ```html
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Imperial Motors</title>
     <link rel="stylesheet" href="../style/styles.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -23,30 +25,47 @@
     <main class="contacto">
         <h1>Contacto</h1>
         <p>Podés comunicarte con nosotros a través de los siguientes medios:</p>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="telefono">Teléfono:</label>
+            <input type="number" id="telefono" name="telefono" required>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+
         <section class="contacto-links">
             <a href="mailto:imperialmotors@gmail.com">Email</a>
             <a href="https://www.facebook.com" target="_blank">Facebook</a>
             <a href="https://www.instagram.com" target="_blank">Instagram</a>
             <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
         </section>
+        <section class="ubicacion">
+            <h2>¿Dónde estamos?</h2> 
+            <iframe src="https://www.google.com/maps?q=Buenos+Aires,+Argentina&output=embed"width="600" height="450"> 
+            </iframe>
+        </section>
     </main>
     <footer>
         <p>&copy;<span id="year"></span> Todos los Derechos Reservados</p>
         <ul>
-            <li> 
-                <a href="https://www.facebook.com" target="_blank"> Facebook 
-                    <img src="../assets/logos/logofacebook.png" alt="Logo de Facebook"> 
-                </a> 
+            <li>
+                <a href="https://www.facebook.com" target="_blank"> Facebook
+                    <img src="../assets/logos/logofacebook.png" alt="Logo de Facebook">
+                </a>
             </li>
-            <li> 
-                <a href="https://www.instagram.com" target="_blank"> Instagram 
-                    <img src="../assets/logos/logoinstagram.png" alt="Logo de Instagram"> 
-                </a> 
+            <li>
+                <a href="https://www.instagram.com" target="_blank"> Instagram
+                    <img src="../assets/logos/logoinstagram.png" alt="Logo de Instagram">
+                </a>
             </li>
-            <li> 
-                <a href="https://wa.me/1234567890" target="_blank"> WhatsApp 
-                    <img src="../assets/logos/logowhatsapp.png" alt="Logo de WhatsApp"> 
-                </a> 
+            <li>
+                <a href="https://wa.me/1234567890" target="_blank"> WhatsApp
+                    <img src="../assets/logos/logowhatsapp.png" alt="Logo de WhatsApp">
+                </a>
             </li>
         </ul>
     </footer>
@@ -54,4 +73,5 @@
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
+
 </html>
