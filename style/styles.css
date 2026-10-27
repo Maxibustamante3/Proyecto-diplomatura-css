@@ -1,3 +1,6 @@
+
+
+/*# sourceMappingURL=styles.css.map */
 * {
 box-sizing: border-box;
 margin: 0;
@@ -24,7 +27,7 @@ nav {
 }
 
 nav .logo {
-    width: 20rem;
+    width: 15rem;
 }
 
 nav ul {   
@@ -37,7 +40,7 @@ nav ul li {
 }
 nav ul li a {
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--blanco-hueso);
 }
 
@@ -61,7 +64,7 @@ main h2 {
 }
 
 main p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 main a{
