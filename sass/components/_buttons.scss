@@ -1,0 +1,54 @@
+@use '../utilities/variables' as v;
+
+.button-link{
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    background-color: v.$azul-marino;
+    color: v.$blanco-hueso;
+    border-radius: v.$borde-redondeado;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+
+    &:hover{
+        background-color: v.$dorado;
+        color: v.$azul-marino;
+        transform: translateY(-3px);
+    }
+
+    &:focus-visible{
+        outline: 2px solid v.$dorado;
+        outline-offset: 3px;
+    }
+
+    &:active{
+        transform: scale(0.97);
+    }
+}
+
+.contacto-links{
+    a{
+        color: v.$azul-marino;
+        transition: color 0.3s ease, transform 0.3s ease;
+
+        &:hover{
+            color: v.$dorado;
+        }
+
+        &:focus-visible{
+            outline: 2px solid v.$dorado;
+            outline-offset: 3px;
+        }
+    }
+}
+
+main a, button,.btn{
+    transition: color 0.3s ease, background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+main a:focus-visible,
+button:focus-visible,
+.btn:focus-visible{
+    outline: 2px solid v.$dorado;
+    outline-offset: 3px;
+}

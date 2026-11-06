@@ -1,4 +1,16 @@
-main section .card {
-    width: 30rem;
-    margin-bottom: 1rem;
-}
+// UTILITIES
+@use 'utilities/variables';
+@use 'utilities/mixins';
+
+// BASE
+@use 'base/tipografia';
+@use 'base/base';
+
+// LAYOUT
+@use 'layout/header';
+@use 'layout/nav';
+@use 'layout/footer';
+
+// COMPONENTS
+@use 'components/buttons';
+@use 'components/cards';

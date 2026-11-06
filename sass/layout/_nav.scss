@@ -1,0 +1,143 @@
+
+@use '../utilities/variables' as v;
+
+.nav{
+    background-color: v.$azul-marino;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+
+    .logo{
+        width: min(12rem, 75vw);
+    }
+}
+
+.nav-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    width: 100%;
+
+    li{
+        padding: 0.4rem;
+    }
+
+    a{
+        color: v.$blanco-hueso;
+        text-decoration: none;
+        font-size: 0.95rem;
+
+        &:hover,
+        &:focus-visible{
+            color: v.$dorado;
+        }
+    }
+}
+
+.site-navbar{
+    background-color: v.$azul-marino;
+    padding: 0.75rem 1rem;
+
+    --bs-navbar-color: #{v.$blanco-hueso};
+    --bs-navbar-hover-color: #{v.$dorado};
+    --bs-navbar-active-color: #{v.$dorado};
+    --bs-navbar-brand-color: #{v.$blanco-hueso};
+    --bs-navbar-brand-hover-color: #{v.$dorado};
+    --bs-navbar-toggler-border-color: #{v.$dorado};
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(242,233,208,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+
+    .logo{
+        width: min(12rem, 65vw);
+        transition: transform 0.3s ease;
+
+        &:hover{
+            transform: scale(1.03);
+        }
+    }
+
+    .nav-link{
+        padding: 0.65rem 0.8rem;
+        border-radius: 0.25rem;
+        transition: color 0.25s ease, background-color 0.25s ease;
+
+        &:hover{
+            color: v.$dorado;
+            background-color: rgba(255, 255, 255, 0.06);
+        }
+
+        &:focus-visible{
+            color: v.$dorado;
+            outline: 2px solid v.$dorado;
+            outline-offset: 2px;
+        }
+
+        &:active{
+            color: v.$blanco-hueso;
+            background-color: rgba(201, 162, 75, 0.25);
+        }
+    }
+
+    .navbar-toggler{
+        transition: background-color 0.25s ease;
+
+        &:hover,
+        &:focus-visible{
+            background-color: rgba(201, 162, 75, 0.15);
+        }
+
+        &:focus-visible{
+            outline: 2px solid v.$dorado;
+            outline-offset: 3px;
+            box-shadow: none;
+        }
+    }
+}
+
+@media (min-width: 768px){
+    .nav {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .nav-list{
+        width: auto;
+        justify-content: flex-end;
+        gap: 0.4rem;
+
+        li{
+            padding: 0.35rem;
+        }
+    }
+}
+
+@media (min-width: 1024px){
+    .nav {
+        padding: 1rem 3rem;
+
+        .logo{
+            width: 15rem;
+        }
+    }
+
+    .nav-list{
+        gap: 1rem;
+
+        a {
+            font-size: 1rem;
+        }
+    }
+
+    .site-navbar{
+        padding: 0.75rem 3rem;
+
+        .logo{
+            width: 15rem;
+        }
+    }
+}
