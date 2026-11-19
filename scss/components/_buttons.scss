@@ -1,0 +1,63 @@
+@use '../utilities/variables' as v;
+
+// ESTILO BASE COMPARTIDO
+%button-base {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    border-radius: v.$radio-borde;
+    text-decoration: none;
+    transition: v.$transicion;
+}
+
+// BOTÓN PRINCIPAL
+.button-link {
+    @extend %button-base;
+
+    background-color: v.$color-principal;
+    color: v.$color-blanco;
+
+    &:hover {
+        background-color: v.$color-secundario;
+        color: v.$color-principal;
+        transform: translateY(-3px);
+    }
+
+    &:focus-visible {
+        outline: 2px solid v.$color-secundario;
+        outline-offset: 3px;
+    }
+
+    &:active {
+        transform: scale(0.97);
+    }
+}
+
+// ENLACES DE CONTACTO
+.contacto-links {
+    a {
+        color: v.$color-principal;
+        transition: v.$transicion;
+
+        &:hover {
+            color: v.$color-secundario;
+        }
+
+        &:focus-visible {
+            outline: 2px solid v.$color-secundario;
+            outline-offset: 3px;
+        }
+    }
+}
+
+// ELEMENTOS INTERACTIVOS
+main a,button,
+.btn {
+    transition: v.$transicion;
+}
+
+main a:focus-visible,
+button:focus-visible,
+.btn:focus-visible {
+    outline: 2px solid v.$color-secundario;
+    outline-offset: 3px;
+}

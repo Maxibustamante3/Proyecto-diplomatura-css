@@ -1,0 +1,31 @@
+@use '../utilities/variables' as v;
+
+// TARJETAS
+.card {
+    border: 1px solid rgba(17, 17, 17, 0.15);
+    border-radius: v.$radio-borde;
+    overflow: hidden;
+    background-color: v.$color-blanco;
+    color: v.$color-texto;
+    transition: v.$transicion;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+}
+
+// GALERÍA DE IMÁGENES
+.galeria-imagenes {
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: v.$radio-borde;
+        transition: v.$transicion;
+
+        &:hover {
+            transform: scale(1.03);
+            opacity: 0.9;
+        }
+    }
+}

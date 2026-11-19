@@ -1,0 +1,17 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+.header {
+    background-color: v.$color-blanco;
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+
+    .container {
+        max-width: v.$ancho-maximo;
+        margin: 0 auto;
+        padding: 15px;
+
+        @include m.flex-between(15px);
+    }
+}

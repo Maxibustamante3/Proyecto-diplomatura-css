@@ -1,5 +1,34 @@
+@charset "UTF-8";
+/* COLORES PRINCIPALES */
+/* TIPOGRAFÍA */
+/* TAMAÑOS */
+/* TRANSICIONES */
 body {
-  font-family: sans-serif;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111111;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  line-height: 1.6;
 }
 
 * {
@@ -8,8 +37,14 @@ body {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  color: rgb(11, 22, 38);
+  color: #222222;
+  background-color: #ffffff;
+  font-family: "Arial", sans-serif;
   line-height: 1.6;
 }
 
@@ -20,15 +55,36 @@ img {
 }
 
 a {
+  text-decoration: none;
   overflow-wrap: anywhere;
 }
 
+ul, ol {
+  list-style: none;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
 .header {
-  background-color: rgb(242, 233, 208);
+  background-color: #ffffff;
+  width: 100%;
+  position: relative;
+  z-index: 1000;
+}
+.header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
 }
 
 .nav {
-  background-color: rgb(11, 22, 38);
+  background-color: #111111;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,24 +108,24 @@ a {
   padding: 0.4rem;
 }
 .nav-list a {
-  color: rgb(242, 233, 208);
+  color: #ffffff;
   text-decoration: none;
   font-size: 0.95rem;
 }
 .nav-list a:hover, .nav-list a:focus-visible {
-  color: rgb(201, 162, 75);
+  color: #c9a227;
 }
 
 .site-navbar {
-  background-color: rgb(11, 22, 38);
+  background-color: #111111;
   padding: 0.75rem 1rem;
-  --bs-navbar-color: rgb(242, 233, 208);
-  --bs-navbar-hover-color: rgb(201, 162, 75);
-  --bs-navbar-active-color: rgb(201, 162, 75);
-  --bs-navbar-brand-color: rgb(242, 233, 208);
-  --bs-navbar-brand-hover-color: rgb(201, 162, 75);
-  --bs-navbar-toggler-border-color: rgb(201, 162, 75);
-  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(242,233,208,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  --bs-navbar-color: #ffffff;
+  --bs-navbar-hover-color: #c9a227;
+  --bs-navbar-active-color: #c9a227;
+  --bs-navbar-brand-color: #ffffff;
+  --bs-navbar-brand-hover-color: #c9a227;
+  --bs-navbar-toggler-border-color: #c9a227;
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 .site-navbar .logo {
   width: min(12rem, 65vw);
@@ -80,30 +136,30 @@ a {
 }
 .site-navbar .nav-link {
   padding: 0.65rem 0.8rem;
-  border-radius: 0.25rem;
-  transition: color 0.25s ease, background-color 0.25s ease;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 .site-navbar .nav-link:hover {
-  color: rgb(201, 162, 75);
+  color: #c9a227;
   background-color: rgba(255, 255, 255, 0.06);
 }
 .site-navbar .nav-link:focus-visible {
-  color: rgb(201, 162, 75);
-  outline: 2px solid rgb(201, 162, 75);
+  color: #c9a227;
+  outline: 2px solid #c9a227;
   outline-offset: 2px;
 }
 .site-navbar .nav-link:active {
-  color: rgb(242, 233, 208);
-  background-color: rgba(201, 162, 75, 0.25);
+  color: #ffffff;
+  background-color: rgba(201, 162, 39, 0.25);
 }
 .site-navbar .navbar-toggler {
   transition: background-color 0.25s ease;
 }
 .site-navbar .navbar-toggler:hover, .site-navbar .navbar-toggler:focus-visible {
-  background-color: rgba(201, 162, 75, 0.15);
+  background-color: rgba(201, 162, 39, 0.15);
 }
 .site-navbar .navbar-toggler:focus-visible {
-  outline: 2px solid rgb(201, 162, 75);
+  outline: 2px solid #c9a227;
   outline-offset: 3px;
   box-shadow: none;
 }
@@ -118,9 +174,6 @@ a {
     width: auto;
     justify-content: flex-end;
     gap: 0.4rem;
-  }
-  .nav-list li {
-    padding: 0.35rem;
   }
 }
 @media (min-width: 1024px) {
@@ -149,8 +202,8 @@ a {
   align-items: center;
   gap: 1.25rem;
   padding: 1.5rem 1rem;
-  background-color: rgb(11, 22, 38);
-  color: rgb(242, 233, 208);
+  background-color: #111111;
+  color: #ffffff;
   text-align: center;
 }
 @media (min-width: 768px) {
@@ -179,8 +232,12 @@ a {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  color: rgb(242, 233, 208);
+  color: #ffffff;
   text-decoration: none;
+  transition: all 0.3s ease;
+}
+.social-list a:hover {
+  color: #c9a227;
 }
 .social-list img {
   width: 1.25rem;
@@ -191,19 +248,22 @@ a {
 .button-link {
   display: inline-block;
   padding: 0.7rem 1.2rem;
-  background-color: rgb(11, 22, 38);
-  color: rgb(242, 233, 208);
   border-radius: 8px;
   text-decoration: none;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.button-link {
+  background-color: #111111;
+  color: #ffffff;
 }
 .button-link:hover {
-  background-color: rgb(201, 162, 75);
-  color: rgb(11, 22, 38);
+  background-color: #c9a227;
+  color: #111111;
   transform: translateY(-3px);
 }
 .button-link:focus-visible {
-  outline: 2px solid rgb(201, 162, 75);
+  outline: 2px solid #c9a227;
   outline-offset: 3px;
 }
 .button-link:active {
@@ -211,35 +271,36 @@ a {
 }
 
 .contacto-links a {
-  color: rgb(11, 22, 38);
-  transition: color 0.3s ease, transform 0.3s ease;
+  color: #111111;
+  transition: all 0.3s ease;
 }
 .contacto-links a:hover {
-  color: rgb(201, 162, 75);
+  color: #c9a227;
 }
 .contacto-links a:focus-visible {
-  outline: 2px solid rgb(201, 162, 75);
+  outline: 2px solid #c9a227;
   outline-offset: 3px;
 }
 
-main a,
-button,
+main a, button,
 .btn {
-  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 main a:focus-visible,
 button:focus-visible,
 .btn:focus-visible {
-  outline: 2px solid rgb(201, 162, 75);
+  outline: 2px solid #c9a227;
   outline-offset: 3px;
 }
 
 .card {
-  border: 1px solid rgba(11, 22, 38, 0.15);
+  border: 1px solid rgba(17, 17, 17, 0.15);
   border-radius: 8px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+  color: #222222;
+  transition: all 0.3s ease;
 }
 .card:hover {
   transform: translateY(-5px);
@@ -250,16 +311,11 @@ button:focus-visible,
   width: 100%;
   height: auto;
   border-radius: 8px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: all 0.3s ease;
 }
 .galeria-imagenes img:hover {
   transform: scale(1.03);
   opacity: 0.9;
-}
-
-main section .card {
-  background-color: rgb(242, 233, 208);
-  color: rgb(11, 22, 38);
 }
 
 /*# sourceMappingURL=styles.css.map */

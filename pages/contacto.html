@@ -1,26 +1,30 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Imperial Motors</title>
+    <title>Contacto | Imperial Motors</title>
+    <meta name="description" content="Contactate con Imperial Motors para recibir asesoramiento sobre nuestros vehículos, consultas y servicios.">
+    <meta name="keywords" content="contacto, Imperial Motors, concesionaria, consultas, asesoramiento, autos">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="../style/styles.css">
+    <link rel="stylesheet" href="../styles/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg site-navbar">
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark site-navbar">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../index.html">
-                    <img src="../assets/logos/logoimperialmotors.png" alt="Imperial Motors" class="logo">
+                    <img src="../assets/logos/logoimperialmotors.png"
+                        alt="Imperial Motors" class="logo">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
-                    aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir menú de navegación">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="menuPrincipal">
@@ -29,7 +33,7 @@
                             <a class="nav-link" href="../index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./contacto.html">Contacto</a>
+                            <a class="nav-link active" aria-current="page" href="./contacto.html">Contacto</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./galeria.html">Galería</a>
@@ -38,9 +42,7 @@
                             <a class="nav-link" href="./nuestrosautos.html">Nuestros Autos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./preguntasfrecuentes.html">
-                                Preguntas Frecuentes
-                            </a>
+                            <a class="nav-link" href="./preguntasfrecuentes.html">Preguntas Frecuentes</a>
                         </li>
                     </ul>
                 </div>
@@ -48,46 +50,62 @@
         </nav>
     </header>
     <main class="contacto">
-        <h1>Contacto</h1>
-        <p>Podés comunicarte con nosotros a través de los siguientes medios:</p>
-        <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="telefono">Teléfono:</label>
-            <input type="number" id="telefono" name="telefono" required>
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
+        <section data-aos="fade-up">
+            <h1>Contacto</h1>
+            <p>Podés comunicarte con nosotros a través de los siguientes medios:</p>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
         <section class="contacto-links">
+            <h2>También podés encontrarnos en:</h2>
             <a href="mailto:imperialmotors@gmail.com">Email</a>
-            <a href="https://www.facebook.com" target="_blank">Facebook</a>
-            <a href="https://www.instagram.com" target="_blank">Instagram</a>
-            <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+            <a href="https://www.facebook.com"
+                target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.instagram.com"
+                target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://wa.me/1234567890"
+                target="_blank" rel="noopener noreferrer">WhatsApp</a>
         </section>
         <section class="ubicacion">
             <h2>¿Dónde estamos?</h2>
-            <iframe src="https://www.google.com/maps?q=Buenos+Aires,+Argentina&output=embed" width="600" height="450">
+            <iframe
+                src="https://www.google.com/maps?q=Buenos+Aires,+Argentina&output=embed"
+                title="Ubicación de Imperial Motors en Buenos Aires"
+                width="100%"
+                height="450"
+                style="border:0;"
+                loading="lazy"
+                allowfullscreen>
             </iframe>
         </section>
     </main>
-    <footer>
-        <p>&copy;<span id="year"></span> Todos los Derechos Reservados</p>
-        <ul>
+    <footer class="footer">
+        <p>&copy; <span id="year"></span> Imperial Motors. Todos los derechos reservados.</p>
+        <ul class="social-list">
             <li>
-                <a href="https://www.facebook.com" target="_blank"> Facebook
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                    Facebook
                     <img src="../assets/logos/logofacebook.png" alt="Logo de Facebook">
                 </a>
             </li>
             <li>
-                <a href="https://www.instagram.com" target="_blank"> Instagram
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                    Instagram
                     <img src="../assets/logos/logoinstagram.png" alt="Logo de Instagram">
                 </a>
             </li>
             <li>
-                <a href="https://wa.me/1234567890" target="_blank"> WhatsApp
+                <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+                    WhatsApp
                     <img src="../assets/logos/logowhatsapp.png" alt="Logo de WhatsApp">
                 </a>
             </li>
@@ -97,13 +115,12 @@
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init({
-        duration: 700,
-        once: true,
-        offset: 80
-    });
-</script>
+    <script>
+        AOS.init({
+            duration: 700,
+            once: true,
+            offset: 80
+        });
+    </script>
 </body>
-
 </html>

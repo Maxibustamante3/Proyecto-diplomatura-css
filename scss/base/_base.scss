@@ -1,0 +1,37 @@
+@use '../utilities/variables' as v;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: v.$color-texto;
+    background-color: v.$color-blanco;
+    font-family: v.$fuente-principal;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+button, input, textarea {
+    font: inherit;
+}
